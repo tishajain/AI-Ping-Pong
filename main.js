@@ -4,7 +4,6 @@ scoreRightWrist = 0;
 
 game_status = "";
 
-//var doggo_theme = new Audio("https://saantonandre.github.io/doggo_theme.wav");
 
  function preload() {
   ball_touch_paddel = loadSound("ball_touch_paddel.wav");
@@ -55,4 +54,16 @@ function draw(){
   rect(680,0,20,700);
 
   fill("black");
-  stroke("black");}
+ stroke("black");
+  
+  if(scoreRightWrist > 0.2)
+  {
+    fill("red");
+    stroke("red");
+    circle(rightWristX, rightWristY, 30);
+  }
+
+  if(game_status == "start")
+  {
+    document.getElementById("status").innerHTML = "Game Is Loaded"; 
+  } }
